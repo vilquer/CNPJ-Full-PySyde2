@@ -35,8 +35,8 @@ https://pypi.org/project/PySide2/
 
 ## Utilização
 Como dito antes, funciona em conhunto com o projeto [CNPJ-full](https://github.com/fabioserpa/CNPJ-full) portanto é necessário juntar os arquivos deste projeto com os arquivos do CNPJ-full: A estrutura de pastas ficará similar a esta:
-<p float="left">
-  <img src="imagens/imagem6.png" width="400" />
+<p align="left">
+  <img src="imagens/imagem9.png">
 </p>
 
 
