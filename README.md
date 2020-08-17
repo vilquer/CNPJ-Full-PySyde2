@@ -10,17 +10,17 @@
 ## Imagens das Telas
 
 <p float="left">
-  <img src="imagens/imagem1.png" width="500" />
+  <img src="imagens/imagem1.png" width="400" />
   &#32;
-  <img src="imagens/imagem2.png" width="500" /> 
+  <img src="imagens/imagem2.png" width="400" /> 
 </p>
 
 &#32;
 
 <p float="left">
-  <img src="imagens/imagem1.png" width="500" />
+  <img src="imagens/imagem1.png" width="400" />
   &#32;
-  <img src="imagens/imagem2.png" width="500" /> 
+  <img src="imagens/imagem2.png" width="400" /> 
 </p>
 
 ## **Atenção**
@@ -34,7 +34,11 @@ ou
 https://pypi.org/project/PySide2/
 
 ## Utilização
-Como dito antes, funciona em conhunto com o projeto [CNPJ-full](https://github.com/fabioserpa/CNPJ-full) portanto é necessário juntar os arquivos deste projeto com os arquivos do CNPJ-full:
+Como dito antes, funciona em conhunto com o projeto [CNPJ-full](https://github.com/fabioserpa/CNPJ-full) portanto é necessário juntar os arquivos deste projeto com os arquivos do CNPJ-full: A estrutura de pastas ficará similar a esta:
+<p float="left">
+  <img src="imagens/imagem6.png" width="400" />
+</p>
+
 
 ##
 
