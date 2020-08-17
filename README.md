@@ -35,10 +35,38 @@ https://pypi.org/project/PySide2/
 
 ## Utilização
 Como dito antes, funciona em conhunto com o projeto [CNPJ-full](https://github.com/fabioserpa/CNPJ-full) portanto é necessário juntar os arquivos deste projeto com os arquivos do CNPJ-full: A estrutura de pastas ficará similar a esta:
+
 <p align="left">
-  <img src="imagens/imagem9.png">
+  <img src="imagens/imagem9.PNG">
 </p>
 
+* Confiture o arquivo config.py para o caminho correto do Banco de Dados SQLite.
 
-##
+## Funcionalidades:
+1. Pesquisa pelo CNPJ: Digite o Cnpj e clique em Pesquisar
+2. Apresentação dos detalhes:
+   1. Aba Geral: Dados em geral
+   2. Aba Sócios: Dados relativos aos sócios daquele Cnpj
+   3. Aba CNAES: Dados dos Nomes dos Cnaes primário e secundários.
+3. Gráfico:
+   1. Grafico de relacionamento: Abre primeiramente com nível de detalhamento igual a 1 podendo ser alterado atravéz do botão deslizante abaixo. Link no canto direito para abrir o gráfico no navegador(Chrome).
 
+## Erros conhecidos
+* se duas pessoas gerarem o gráfico ao mesmo tempo um poderá receber o grafico errado pois o sistema cria o mesmo nome de arquivo.
+
+## TO DO
+- [x] Adcionar uma Licença.
+- [x] Criar um README.
+- [ ] Modicicar a geração do gráfico para buscar diretamente da classe RedeCNPJ e não da função consulta.
+- [ ] Escolher o Browser principal. Modificar a chamada do Browser.
+- [ ] Implementar uma pesquisa atravéz da aba de Sócios quando um sócio for escolhido(talvez dois cliques).
+- [ ] Modificara criação do arquivo do gráfico, gerar um arquivo exclusivo por pesquisa. Gerenciar a exclusão do arquivo quando não for mais necessário.
+
+## Erros conhecidos
+* se duas pessoas gerarem o gráfico ao mesmo tempo um poderá receber o grafico errado pois o sistema cria o mesmo nome de arquivo.
+* se não estiver instalado o Chrome, apresenta um erro de caminho não encontrado.
+
+
+
+
+##### Criado com a intenção pessoal de aprimoramento na linguagem Python e aprendizagem da bibilioteca PySide2. Não temos responsabilidade sobre os dados ou sobre a utilização das informações.
