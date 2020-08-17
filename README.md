@@ -1,6 +1,6 @@
 # CNPJ-Full-PySyde2
-## Ambiente grafico para consulta dos dados públicos da RFB(Receita Federal do Brasil).
-###### Este projeto, desenvolvido em Python 3.8, objetiva apenas apresentar um ambiente gráfico para pesquisa dos dados públicos disponibilisados periodicamente no site da RFB e extraídos através do projeto do Sr. Fabio Serpa. "@fabioserpa"
+## Ambiente gráfico para consulta dos dados públicos da RFB(Receita Federal do Brasil).
+###### Este projeto, desenvolvido em Python 3.8, objetiva apenas apresentar um ambiente gráfico para pesquisa dos dados públicos disponibilizados periodicamente no site da RFB e extraídos através do projeto do Sr. Fabio Serpa. "@fabioserpa"
  
 
 **Links:**
