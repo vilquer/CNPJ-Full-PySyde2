@@ -3,17 +3,21 @@
 import sys
 import re
 import os
+import json
 import sqlite3
 import subprocess
 import pandas as pd
 from PySide2 import QtCore, QtGui, QtWidgets
+from PySide2.QtWebChannel import QWebChannel
+from PySide2.QtWebEngineWidgets import QWebEngineView , QWebEnginePage
 from PySide2.QtCore import Qt
 
 from uis.main import Ui_MainWindow
 
+from rede_cnpj import RedeCNPJ
 import configs
 import config
-import consulta
+
 
 df = pd.DataFrame()
 df_socios = pd.DataFrame()
@@ -22,7 +26,7 @@ df_cnae = pd.DataFrame()
 ######## variáveis com os caminhos relativos
 local_url_icone_mapa = QtCore.QUrl.fromLocalFile(os.path.abspath(os.path.join(os.path.dirname(__file__), "resources/rede.PNG")))
 local_url_mapa = QtCore.QUrl.fromLocalFile(os.path.abspath(os.path.join(os.path.dirname(__file__), "folder/grafo.html")))
-
+path_output ='folder'
 
 class TableModel(QtCore.QAbstractTableModel):
 
@@ -77,9 +81,26 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
 
 		def gera_grafico(cnpj, nivel):
-			print(cnpj)
-			print(nivel)
-			consulta.consulta(tipo_consulta='cnpj', objeto_consulta=cnpj, qualificacoes=config.QUALIFICACOES, path_BD=config.PATH_BD, nivel_max=nivel, path_output='folder', csv=False , colunas_csv=config.COLUNAS_CSV, csv_sep=config.SEP_CSV, graphml=False, gexf=False, viz=True, path_conexoes=None)
+			global local_url_mapa
+			self.conn = sqlite3.connect("data\CNPJ_full.db")
+			rede = RedeCNPJ(self.conn, nivel_max=nivel, qualificacoes=config.QUALIFICACOES)
+			item = cnpj.strip()
+			rede.insere_pessoa(1, item.replace('.','').replace('/','').replace('-','').replace(' ','').zfill(14))
+			item.replace('.','').replace('/','').replace('-','').replace(' ','').zfill(14)
+
+			with open('viz/template.html', 'r', encoding='utf-8') as template:
+				str_html = template.read().replace('<!--GRAFO-->', json.dumps(rede.json()))
+
+			path_html = os.path.join(path_output, 'grafo'+ item +'.html')
+			local_url_mapa = QtCore.QUrl.fromLocalFile(os.path.abspath(os.path.join(os.path.dirname(__file__), path_output+'/grafo'+ item +'.html')))
+			with open(path_html, 'w', encoding='utf-8') as html:
+				html.write(str_html)
+			
+
+
+
+			#antiga forma de fazer chamada
+			#consulta.consulta(tipo_consulta='cnpj', objeto_consulta=cnpj, qualificacoes=config.QUALIFICACOES, path_BD=config.PATH_BD, nivel_max=nivel, path_output='folder', csv=False , colunas_csv=config.COLUNAS_CSV, csv_sep=config.SEP_CSV, graphml=False, gexf=False, viz=True, path_conexoes=None)
 			
 
 		def limpar_campos():

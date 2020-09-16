@@ -1,0 +1,4 @@
+
+pyside2-uic .\uis\main.ui -o .\uis\main.py -x
+
+pyside2-rcc .\resources\resources.qrc -o .\uis\resources_rc.py

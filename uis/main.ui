@@ -889,6 +889,9 @@
          <height>101</height>
         </rect>
        </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
       </widget>
      </widget>
      <zorder>gpr_simples</zorder>
@@ -963,7 +966,7 @@
     </widget>
     <widget class="QWidget" name="tab_mapa">
      <attribute name="title">
-      <string>Mapa</string>
+      <string>Grafo</string>
      </attribute>
      <widget class="QWebEngineView" name="webEngineView">
       <property name="enabled">

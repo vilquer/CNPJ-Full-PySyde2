@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file '.\uis\main.ui',
 # licensing of '.\uis\main.ui' applies.
 #
-# Created: Tue Aug 11 22:04:16 2020
+# Created: Wed Sep 16 19:28:57 2020
 #      by: pyside2-uic  running on PySide2 5.13.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -358,6 +358,7 @@ class Ui_MainWindow(object):
         self.label_4.setObjectName("label_4")
         self.edt_motivo_situacao = QtWidgets.QTextEdit(self.grp_situacao)
         self.edt_motivo_situacao.setGeometry(QtCore.QRect(10, 120, 271, 101))
+        self.edt_motivo_situacao.setFocusPolicy(QtCore.Qt.NoFocus)
         self.edt_motivo_situacao.setObjectName("edt_motivo_situacao")
         self.tabWidget.addTab(self.tab_geral, "")
         self.tab_socios = QtWidgets.QWidget()
@@ -529,7 +530,7 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_cnaes), QtWidgets.QApplication.translate("MainWindow", "CNAES", None, -1))
         self.commandLinkButton.setText(QtWidgets.QApplication.translate("MainWindow", "Abrir no Navegador", None, -1))
         self.label_33.setText(QtWidgets.QApplication.translate("MainWindow", "Nível", None, -1))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_mapa), QtWidgets.QApplication.translate("MainWindow", "Mapa", None, -1))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_mapa), QtWidgets.QApplication.translate("MainWindow", "Grafo", None, -1))
         self.lbl_cnpj.setText(QtWidgets.QApplication.translate("MainWindow", "CNPJ: ", None, -1))
         self.edt_cnpj.setWhatsThis(QtWidgets.QApplication.translate("MainWindow", "<html><head/><body><p>Digite aqui o CNPJ que deve ser consultado na base de dados.</p></body></html>", None, -1))
         self.edt_cnpj.setInputMask(QtWidgets.QApplication.translate("MainWindow", "00.000.000/0000-00", None, -1))
