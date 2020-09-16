@@ -52,15 +52,17 @@ Como dito antes, funciona em conjunto com o projeto [CNPJ-full](https://github.c
    1. Grafo de relacionamento: Abre primeiramente com nível de detalhamento igual a 1 podendo ser alterado através do botão deslizante abaixo. Link no canto direito para abrir o grafo no navegador(Chrome).
 
 ## Erros conhecidos
-* se duas pessoas gerarem o grafo ao mesmo tempo um poderá receber o grafo errado pois o sistema cria o mesmo nome de arquivo.
+* o arquivo html gerado na pasta folder não é excluido.
 
 ## TO DO
 - [x] Adicionar uma Licença.
 - [x] Criar um README.
-- [ ] Modificar a geração do grafo para buscar diretamente da classe RedeCNPJ e não da função consulta.
+- [x] Modificar a geração do grafo para buscar diretamente da classe RedeCNPJ e não da função consulta.
+- [x] Modificara criação do arquivo do grafo, gerar um arquivo exclusivo por pesquisa.
+- [ ] criar um arquivo de configuração.
 - [ ] Escolher o Browser principal. Modificar a chamada do Browser.
-- [ ] Implementar uma pesquisa através da aba de Sócios quando um sócio for escolhido(talvez dois cliques).
-- [ ] Modificara criação do arquivo do grafo, gerar um arquivo exclusivo por pesquisa. Gerenciar a exclusão do arquivo quando não for mais necessário.
+- [ ] Implementar uma pesquisa através da aba de Sócios quando um sócio for escolhido(talvez dois cliques). 
+- [ ] Gerenciar a exclusão do arquivo html quando não for mais necessário.
 
 ## Erros conhecidos
 * se duas pessoas gerarem o grafo ao mesmo tempo um poderá receber o grafo errado pois o sistema cria o mesmo nome de arquivo.
